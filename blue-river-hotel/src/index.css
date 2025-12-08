@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0077B6;
+  --color-secondary: #0096C7;
+  --color-accent: #00B4D8;
+  --color-dark: #023E8A;
+  --color-darkest: #03045E;
+  --color-light: #90E0EF;
+  --color-lighter: #ADE8F4;
+  --color-lightest: #CAF0F8;
+  --color-light-accent: #48CAE4;
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-lightest text-darkest;
+  }
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
